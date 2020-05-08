@@ -51,12 +51,12 @@ export class RestaurantInput extends Component {
   }
 };
 
-function mapStateToProps(state)
-{
-  return{
-    restaurants: state.restaurants
-  }
-}
+// function mapStateToProps(state)
+// {
+//   return{
+//     restaurants: state.restaurants
+//   }
+// }
 
 function mapDispatchToProps(dispatch)
 {
@@ -66,4 +66,6 @@ function mapDispatchToProps(dispatch)
 }
 //connect this component by wrapping RestaurantInput below
 // export default RestaurantInput
-export default connect(mapStateToProps,mapDispatchToProps)(RestaurantInput);
+// export default connect(mapStateToProps,mapDispatchToProps)(RestaurantInput);
+// export default connect(null,mapDispatchToProps)(RestaurantInput);
+export default connect(null,{addRestaurant})(RestaurantInput);
